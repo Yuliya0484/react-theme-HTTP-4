@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "email": "Sincere@april.biz",
+    "bio": "Experienced developer with deep expertise in React and Vue, passionate about building modern web applications.",
+    "skills": ["react", "vue"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "email": "Shanna@melissa.tv",
+    "skills": ["angular"],
+    "isOpenToWork": true
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "email": "Nathan@yesenia.net",
+    "bio": "React developer with a strong focus on creating user-friendly interfaces.",
+    "skills": ["react"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "email": "Julianne.OConner@kory.org",
+    "bio": "React expert with extensive experience in complex project development.",
+    "skills": ["react"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "email": "Lucio_Hettinger@annie.ca",
+    "bio": "Skilled in both React and Angular, dedicated to delivering high-quality web solutions.",
+    "skills": ["react", "angular"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "email": "Karley_Dach@jasper.info",
+    "bio": "Vue enthusiast ready to contribute to innovative and dynamic projects.",
+    "skills": ["vue"],
+    "isOpenToWork": true
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "email": "Telly.Hoeger@billy.biz",
+    "bio": "Dedicated React developer with a knack for optimizing performance and usability.",
+    "skills": ["react"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "email": "Sherwood@rosamond.me",
+    "bio": "React developer passionate about contributing to innovative projects.",
+    "skills": ["react"],
+    "isOpenToWork": true
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "email": "Chaim_McDermott@dana.io",
+    "bio": "Seasoned React developer focused on building scalable and robust applications.",
+    "skills": ["react"],
+    "isOpenToWork": false
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "bio": "Angular expert seeking opportunities to work on dynamic and challenging projects.",
+    "skills": ["angular"],
+    "isOpenToWork": true
+  }
+]
