@@ -16,24 +16,17 @@ img {
   width: 100%;
   height: auto;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  max-width: 80%;
+.main-box {
+  padding: 24px;
 }
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.item {
-  list-style-type: none;
-}
-.link {
-  text-decoration: none;
-  color: black;
+.load-btn {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin: 24px;
   &:hover {
-    color: rgb(21, 94, 94);
+    background-color: chocolate;
+    color: white;
   }
 }

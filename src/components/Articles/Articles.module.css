@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: chocolate;
+  }
+}

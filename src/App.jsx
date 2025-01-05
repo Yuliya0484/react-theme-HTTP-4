@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 import { fetchArticles } from "./API/api";
 import Loader from "./components/Loader";
+import Articles from "./components/Articles/Articles";
+import SearchBar from "./components/SearchBar/SearchBar";
+import toast from "react-hot-toast";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [page, setPage] = useState(0);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     // axios
@@ -15,9 +20,9 @@ const App = () => {
       try {
         setIsLoading(true);
         setIsError(false);
-        const { hits } = await fetchArticles("react");
+        const { hits } = await fetchArticles(query, page);
         setIsLoading(false);
-        setArticles(hits);
+        setArticles((prev) => [...prev, ...hits]);
       } catch (error) {
         setIsError(true);
         console.log(error);
@@ -26,19 +31,29 @@ const App = () => {
       }
     };
     getArticlesData();
-  }, []);
+  }, [query, page]);
+  const handleChangePage = () => {
+    toast.success(`Page chanched to: ${page + 1}`);
+    setPage((prev) => prev + 1);
+  };
+  const handleChangeQuery = (newQuery) => {
+    if (newQuery === query) {
+      toast.error("Please change query!");
+      return;
+    }
+    setQuery(newQuery);
+    setArticles([]);
+    setPage(0);
+  };
   return (
-    <div>
+    <div className="main-box">
       <h2>Http Requests</h2>
-      <ul className="list">
-        {articles.map((item) => (
-          <li className="item" key={item.objectID}>
-            <a className="link" target="blank" href={item.url}>
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <h3>News List</h3>
+      <SearchBar onSearchChanged={handleChangeQuery} />
+      {articles.length > 0 && <Articles articles={articles} />}
+      <button className="load-btn" onClick={handleChangePage}>
+        Load More
+      </button>
       {isLoading && <Loader />}
       {isError && <h2>Something went wrong! Try again...</h2>}
     </div>
