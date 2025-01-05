@@ -22,3 +22,18 @@ img {
   gap: 10px;
   max-width: 80%;
 }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.item {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: rgb(21, 94, 94);
+  }
+}
